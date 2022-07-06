@@ -16,8 +16,8 @@ html {
 }
 body {
     height: 100%;
-    line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+    font-family: 'Montserrat Alternates', sans-serif;
+    -webkit-font-smoothing: antialiased;
     a {
         outline: none;
         text-decoration: none;
