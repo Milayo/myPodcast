@@ -23,6 +23,7 @@ export const Button = styled.button<{
   width: ${({ width }) => width};
   background: none;
   text-transform: uppercase;
+  cursor: pointer;
 
   ${mediaQueries.phone} {
     /* font-size: 1.4rem;

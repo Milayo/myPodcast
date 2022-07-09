@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { theme } from "../../utils/themes/theme";
 import Flex from "../../utils/flex/flex";
 import NavLogo from "../../assets/images/logo.png";
 import ArrowDown from "../../assets/images/Arrow - Down.png";
@@ -7,9 +6,10 @@ import Typography from "../../utils/typography";
 import { Button as BaseButton } from "../../components/button/index";
 
 const NavContainer = styled(Flex)`
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 7.4rem;
+  margin: 0 14rem;
 `;
 
 const Button = styled(BaseButton)`
@@ -18,7 +18,7 @@ const Button = styled(BaseButton)`
     background === "dark" && theme.colors.black};
   color: ${({ color }) => color === "white" && "white"};
   box-shadow: ${({ boxShadow }) =>
-    boxShadow === "true" && "3px 3px 0px rgba(0, 0, 0, 0.25)"};
+  boxShadow === "true" && "3px 3px 0px rgba(0, 0, 0, 0.25)"};
 `;
 
 const Navigation = () => {
