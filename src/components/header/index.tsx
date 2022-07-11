@@ -3,8 +3,10 @@ import styled from "styled-components";
 import Typography from "../../utils/typography";
 import { Button as SubScribeButton } from "../../components/button/index";
 import Flex from "../../utils/flex/flex";
-import Swirl from "../../assets/images/Hero Shape Swirl.svg";
-import Stars from "../../assets/images/Group 48095792.png";
+import Swirl from "../../assets/images/Hero-Swirl.svg";
+import Stars from "../../assets/images/Hero-Star.png";
+import CoverCards from "../cover-cards/cover-cards";
+import Platform from "../platform";
 
 const HeaderContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.champagne};
@@ -58,6 +60,7 @@ const Button = styled(SubScribeButton)`
   color: white;
   box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.25);
   width: max-content;
+  margin-bottom: 12rem;
 `;
 
 const Header = () => {
@@ -85,6 +88,8 @@ const Header = () => {
         </div>
         <img src={Stars} alt="" className="stars" />
       </ContentContainer>
+      <CoverCards />
+      <Platform />
     </HeaderContainer>
   );
 };
