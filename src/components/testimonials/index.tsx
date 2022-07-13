@@ -25,9 +25,12 @@ const CardContainer = styled.div`
 
 const TestimonialContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.lighterBlue};
-  padding: 14rem 0 10.55rem 14rem;
-  position: relative;
   z-index: -2;
+
+  .container {
+    position: relative;
+    padding: 14rem 0 10.55rem 14rem;
+  }
 
   .arrow-container {
     width: 11.6rem;
@@ -35,9 +38,7 @@ const TestimonialContainer = styled.div`
 
   .card_container {
     overflow-x: auto;
-    overflow-y: hidden;
     padding-bottom: 1rem;
-    width: 100%;
 
     > * {
       flex-shrink: 0;
@@ -50,19 +51,18 @@ const TestimonialContainer = styled.div`
     &::-webkit-scrollbar-thumb {
       background-color: ${({ theme }) => theme.colors.grey};
       border-radius: 1rem;
-      width: 200px;
     }
   }
 
   .sparkle {
     position: absolute;
-    top: 6.1rem;
-    left: 30rem;
+    top: 6.5rem;
+    left: 30rem
   }
 
   .blackconnector {
     left: 50%;
-    top: 89.5rem;
+    top: 88rem;
     position: absolute;
   }
 `;
@@ -91,42 +91,48 @@ const TestimonialCard = ({ name, image, image2 }: TestimonialCardProps) => {
 const Testimonials = () => {
   return (
     <TestimonialContainer>
-      <img src={Sparkle} alt="sparkle" className="sparkle" />
-      <Typography font="h1" as="h1" align="center" mb="2rem">
-        What our listeners say
-      </Typography>
-      <Typography font="h3" as="h3" align="center" color="#4D4D4D" mb="10rem">
-        Their experience throughout every platform
-      </Typography>
-      <Flex justifyContent="flex-start" gap="2rem" className="card_container">
-        <TestimonialCard
-          name="Luna lovegood,"
-          image={Avatar1}
-          image2={Spotify}
-        />
-        <TestimonialCard
-          name="Emily Blunt,"
-          image={Avatar2}
-          image2={GooglePodcasts}
-        />
-        <TestimonialCard name="Mia Winters," image={Avatar3} image2={Spotify} />
-        <TestimonialCard
-          name="Luna lovegood,"
-          image={Avatar1}
-          image2={Spotify}
-        />
-      </Flex>
-      <Flex
-        justifyContent="start"
-        alignItems="center"
-        gap="2rem"
-        mt="6rem"
-        className="arrow-container"
-      >
-        <img src={LeftArrow} alt="arrow" />
-        <img src={RightArrow} alt="arrow" />
-      </Flex>
-      <img src={BlackConnector} alt="connector" className="blackconnector" />;
+      <div className="container">
+        <img src={Sparkle} alt="sparkle" className="sparkle" />
+        <Typography font="h1" as="h1" align="center" mb="2rem">
+          What our listeners say
+        </Typography>
+        <Typography font="h3" as="h3" align="center" color="#4D4D4D" mb="10rem">
+          Their experience throughout every platform
+        </Typography>
+        <Flex justifyContent="flex-start" gap="2rem" className="card_container">
+          <TestimonialCard
+            name="Luna Lovegood,"
+            image={Avatar1}
+            image2={Spotify}
+          />
+          <TestimonialCard
+            name="Emily Blunt,"
+            image={Avatar2}
+            image2={GooglePodcasts}
+          />
+          <TestimonialCard
+            name="Mia Winters,"
+            image={Avatar3}
+            image2={Spotify}
+          />
+          <TestimonialCard
+            name="Luna Lovegood,"
+            image={Avatar1}
+            image2={Spotify}
+          />
+        </Flex>
+        <Flex
+          justifyContent="start"
+          alignItems="center"
+          gap="2rem"
+          mt="6rem"
+          className="arrow-container"
+        >
+          <img src={LeftArrow} alt="arrow" />
+          <img src={RightArrow} alt="arrow" />
+        </Flex>
+        <img src={BlackConnector} alt="connector" className="blackconnector" />
+      </div>
     </TestimonialContainer>
   );
 };
