@@ -8,11 +8,10 @@ import GooglePodcast from "../../assets/images/Google Podcast.png"
 const PlatformContainer = styled(Flex)`
   border-top: 1.5px solid #4d4d4d;
   padding: 4.6rem;
-  margin: 0 auto;
   justify-content: space-around;
   border-bottom: 1.5px solid #4d4d4d;
-  width: 1160px;
-  margin-top: 12rem;
+  width: 116rem;
+  margin: 12rem auto 0 auto;
 `;
 
 const Platform = () => {
@@ -21,9 +20,9 @@ const Platform = () => {
       <Typography font="h3" as="h3">
         Supported by:
       </Typography>
-      <img src={Spotify} alt="" className="" />
-      <img src={GooglePodcast} alt="" className="" />
-      <img src={YouTube} alt="" className="" />
+      <img src={Spotify} alt="spotify" />
+      <img src={GooglePodcast} alt="google-podcast" />
+      <img src={YouTube} alt="youtube" />
     </PlatformContainer>
   );
 }

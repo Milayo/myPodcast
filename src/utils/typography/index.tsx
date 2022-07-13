@@ -38,7 +38,8 @@ interface TextProps
 const Typography = styled.div<TextProps>`
   font-style: ${({ font }) => typography[font]?.fontStyle || "normal"};
   font-size: ${({ font }) => typography[font]?.fontSize};
-  font-family: ${({ font }) => typography[font]?.fontFamily || "Articulat.CF"};
+  font-family: ${({ font }) =>
+    typography[font]?.fontFamily || "Montserrat Alternates"};
   font-weight: ${({ font }) => typography[font]?.fontWeight};
   line-height: ${({ font }) => typography[font]?.lineHeight};
   color: ${({ color }) => color};

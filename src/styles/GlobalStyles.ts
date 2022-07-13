@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { devices } from "../utils/themes/mediaQueries";
 
 export default createGlobalStyle`
 *,
@@ -13,6 +14,9 @@ html {
     font-size: 62.5%; 
     height: 100%;
   
+    @media ${devices.phone} {
+      font-size: 40%;
+    }
 }
 body {
     height: 100%;

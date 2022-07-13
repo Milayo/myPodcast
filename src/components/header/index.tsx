@@ -11,10 +11,14 @@ import Platform from "../platform";
 const HeaderContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.champagne};
   padding-top: 2.4rem;
+  padding-bottom: 14rem;
   position: relative;
 `;
 
 const ContentContainer = styled(Flex)`
+  .dd {
+    letter-spacing: -0.04em;
+  }
   .swirl {
     top: 7rem;
     left: 0;
@@ -71,7 +75,7 @@ const Header = () => {
         <img src={Swirl} alt="" className="swirl" />
         <div className="middle-content">
           <div className="title">
-            <Typography font="title" as="h1" align="center">
+            <Typography font="title" as="h1" align="center" className="dd">
               Your Daily
               <br /> <span>Podcast</span>
             </Typography>
@@ -86,7 +90,7 @@ const Header = () => {
           </div>
           <Button>Subscribe</Button>
         </div>
-        <img src={Stars} alt="" className="stars" />
+        <img src={Stars} alt="stars" className="stars" />
       </ContentContainer>
       <CoverCards />
       <Platform />
