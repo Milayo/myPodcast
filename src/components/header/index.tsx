@@ -5,6 +5,7 @@ import { Button as SubScribeButton } from "../../components/button/index";
 import Flex from "../../utils/flex/flex";
 import Swirl from "../../assets/images/Hero-Swirl.svg";
 import Stars from "../../assets/images/Hero-Star.png";
+import RedConnector from "../../assets/images/RedConnector.png";
 import CoverCards from "../cover-cards/cover-cards";
 import Platform from "../platform";
 
@@ -13,10 +14,16 @@ const HeaderContainer = styled.div`
   padding-top: 2.4rem;
   padding-bottom: 14rem;
   position: relative;
+
+  .redconnector {
+    left: 50%;
+    top: 139rem;
+    position: absolute;
+  }
 `;
 
 const ContentContainer = styled(Flex)`
-  .dd {
+  .maintitle {
     letter-spacing: -0.04em;
   }
   .swirl {
@@ -69,32 +76,43 @@ const Button = styled(SubScribeButton)`
 
 const Header = () => {
   return (
-    <HeaderContainer>
-      <Navigation />
-      <ContentContainer justifyContent="space-evenly">
-        <img src={Swirl} alt="" className="swirl" />
-        <div className="middle-content">
-          <div className="title">
-            <Typography font="title" as="h1" align="center" className="dd">
-              Your Daily
-              <br /> <span>Podcast</span>
-            </Typography>
-          </div>
+      <HeaderContainer>
+        <Navigation />
+        <ContentContainer justifyContent="space-evenly">
+          <img src={Swirl} alt="" className="swirl" />
+          <div className="middle-content">
+            <div className="title">
+              <Typography
+                font="title"
+                as="h1"
+                align="center"
+                className="maintitle"
+              >
+                Your Daily
+                <br /> <span>Podcast</span>
+              </Typography>
+            </div>
 
-          <div className="subtitle">
-            <Typography font="bodyText" as="h2" align="center" color="#4D4D4D">
-              We cover all kinds of categories
-              <br />
-              and a weekly special guest.
-            </Typography>
+            <div className="subtitle">
+              <Typography
+                font="bodyText"
+                as="h2"
+                align="center"
+                color="#4D4D4D"
+              >
+                We cover all kinds of categories
+                <br />
+                and a weekly special guest.
+              </Typography>
+            </div>
+            <Button>Subscribe</Button>
           </div>
-          <Button>Subscribe</Button>
-        </div>
-        <img src={Stars} alt="stars" className="stars" />
-      </ContentContainer>
-      <CoverCards />
-      <Platform />
-    </HeaderContainer>
+          <img src={Stars} alt="stars" className="stars" />
+        </ContentContainer>
+        <CoverCards />
+        <Platform />
+        <img src={RedConnector} alt="connector" className="redconnector" />
+      </HeaderContainer>
   );
 };
 

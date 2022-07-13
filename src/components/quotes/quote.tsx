@@ -29,14 +29,13 @@ const QuoteSection = () => {
   return (
     <QuoteSectionContainer>
       <img src={QuoteStar} alt="star" className="star" />
-      <img src={QuoteSwirl} alt="swirl" className="swirl"/>
+      <img src={QuoteSwirl} alt="swirl" className="swirl" />
       <Typography
         font="title"
         as="h1"
         align="center"
         color="#CD4631"
         letterSpacing="-0.02em"
-        className=""
       >
         “
       </Typography>
@@ -44,7 +43,6 @@ const QuoteSection = () => {
         font="h2a"
         as="h2"
         align="center"
-        className=""
         letterSpacing="-0.02em"
       >
         One of the best daily podcasts that
@@ -58,18 +56,17 @@ const QuoteSection = () => {
           as="p"
           align="center"
           fontSize="1.4rem"
-          className=""
         >
           John Smith,
         </Typography>
 
-        <img src={Spotify} alt="avatar" style={{ borderRadius: "100%" }} />
+        <img src={Spotify} alt="spotify" />
         <Typography
           font="captionb"
           as="p"
           align="center"
           fontSize="1.4rem"
-          className=""
+
         >
           Social Community Manager
         </Typography>
