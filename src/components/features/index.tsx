@@ -48,7 +48,7 @@ const SectionContainer = styled.div`
 
   .blackconnector {
     left: 50%;
-    top: 121rem;
+    top: 107.9rem;
     position: absolute;
   }
 `;
