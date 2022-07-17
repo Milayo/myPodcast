@@ -4,6 +4,7 @@ import AboutSection from "../../components/about-section";
 import Testimonials from "../../components/testimonials";
 import FeaturesSection from "../../components/features";
 import EpisodesSection from "../../components/episodes";
+import SponsorsSection from "../../components/sponsors";
 
 const PageContainer = styled.div`
   
@@ -16,7 +17,8 @@ const LandingPage = () => {
       <AboutSection />
       <Testimonials />
       <FeaturesSection />
-      <EpisodesSection/>
+      <EpisodesSection />
+      <SponsorsSection/>
     </PageContainer>
   );
 };
