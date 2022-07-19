@@ -2,16 +2,19 @@ import styled from "styled-components";
 import Typography from "../../utils/typography";
 import Flex from "../../utils/flex/flex";
 import { Button as BaseButton } from "../../components/button/index";
-import BlackConnector from "../../assets/images/BlackConnector.png";
+import RedConnector from "../../assets/images/RedConnector.png";
 import Image1 from "../../assets/images/blog-image1.png";
 import Image2 from "../../assets/images/blog-image2.png";
-import { shadow } from "styled-system";
+import Swirl from "../../assets/images/Blog-swirl.png";
+import Star from "../../assets/images/Blog-Star.png";
 
 interface BlogCardProps {
   image: any;
+  title: string;
+  subtitle: string;
   tag1: string;
-    tag2: string;
-    time: string;
+  tag2: string;
+  time: string;
   boxShadow?: boolean;
 }
 
@@ -22,11 +25,32 @@ const Button = styled(BaseButton)`
   border: 2px solid #000000;
   box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
+  max-width: 18.2rem;
+  margin: auto;
   margin-top: 10rem;
 `;
 
 const BlogContainer = styled.div`
   padding: 14rem;
+  position: relative;
+
+  .Redconnector {
+    left: 50%;
+    top: 123.2rem;
+    position: absolute;
+  }
+
+  .star {
+    position: absolute;
+    z-index: -100;
+    top: 29.8rem;
+    left: 4.3rem;
+  }
+  .swirl {
+    position: absolute;
+    bottom: 19.1rem;
+    right: 4rem;
+  }
 `;
 
 const CardContainer = styled.div<{ boxShadow?: boolean }>`
@@ -38,8 +62,7 @@ const CardContainer = styled.div<{ boxShadow?: boolean }>`
   border-radius: 8px;
 
   .title {
-      color: ${({ boxShadow }) =>
-    boxShadow === true && "#CD4631"};
+    color: ${({ boxShadow }) => boxShadow === true && "#CD4631"};
   }
 
   .card-footer {
@@ -55,10 +78,18 @@ const CardContainer = styled.div<{ boxShadow?: boolean }>`
   }
 `;
 
-const BlogCard = ({ image, boxShadow, tag1, tag2, time }: BlogCardProps) => {
+const BlogCard = ({
+  image,
+  boxShadow,
+  tag1,
+  tag2,
+  time,
+  title,
+  subtitle,
+}: BlogCardProps) => {
   return (
     <CardContainer boxShadow={boxShadow}>
-      <img src={image} alt="Image" className="Image" />
+      <img src={image} alt="Image"/>
       <Typography
         font="captionb"
         as="p"
@@ -66,10 +97,10 @@ const BlogCard = ({ image, boxShadow, tag1, tag2, time }: BlogCardProps) => {
         fontSize="1.6rem"
         color="#4D4D4D"
       >
-        PODCAST
+        {subtitle}
       </Typography>
       <Typography font="h2" as="h2" className="title" mt="0.6rem" mb="2rem">
-        Setup your own podcast
+        {title}
       </Typography>
       <Typography
         font="caption"
@@ -84,15 +115,15 @@ const BlogCard = ({ image, boxShadow, tag1, tag2, time }: BlogCardProps) => {
       </Typography>
       <Flex justifyContent="space-between" className="card-footer">
         <Flex justifyContent="start" gap="0.6rem">
-          <Typography font="smallText" as="p" className="tag">
+          <Typography font="smallText" as="p" className="tag" color="#4D4D4D">
             {tag1}
           </Typography>
-          <Typography font="smallText" as="p" className="tag">
-           {tag2}
+          <Typography font="smallText" as="p" className="tag" color="#4D4D4D">
+            {tag2}
           </Typography>
         </Flex>
-        <Typography font="smallTextb" as="p">
-         {time}
+        <Typography font="smallTextb" as="p" color="#4D4D4D">
+          {time}
         </Typography>
       </Flex>
     </CardContainer>
@@ -102,6 +133,8 @@ const BlogCard = ({ image, boxShadow, tag1, tag2, time }: BlogCardProps) => {
 const BlogSection = () => {
   return (
     <BlogContainer>
+      <img src={Star} alt="star" className="star" />
+      <img src={Swirl} alt="swirl" className="swirl" />
       <Typography font="h1" as="h1" align="center">
         Article and News
       </Typography>
@@ -112,6 +145,8 @@ const BlogSection = () => {
         <BlogCard
           image={Image1}
           boxShadow={true}
+          title="Setup your own podcast"
+          subtitle="PODCAST"
           tag1="business"
           tag2="startup"
           time=" Sep 14, 2021"
@@ -119,11 +154,14 @@ const BlogSection = () => {
         <BlogCard
           image={Image2}
           tag1="art"
+          title="Doodle artwork 101"
+          subtitle="TIPS & TRICKS"
           tag2="creativity"
           time=" Sep 12, 2021"
         />
       </Flex>
       <Button>Browse All</Button>
+      <img src={RedConnector} alt="connector" className="Redconnector" />
     </BlogContainer>
   );
 };
