@@ -7,6 +7,7 @@ import EpisodesSection from "../../components/episodes";
 import SponsorsSection from "../../components/sponsors";
 import CTASection from "../../components/cta";
 import BlogSection from "../../components/blogcomponent";
+import FooterSection from "../../components/footer";
 
 const PageContainer = styled.div`
   
@@ -22,7 +23,8 @@ const LandingPage = () => {
       <EpisodesSection />
       <SponsorsSection />
       <BlogSection/>
-      <CTASection/>
+      <CTASection />
+      <FooterSection/>
     </PageContainer>
   );
 };
