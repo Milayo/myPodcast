@@ -7,6 +7,7 @@ import Cover6 from "../../assets/images/cover6.png";
 import styled from "styled-components";
 import Typography from "../../utils/typography";
 import Flex from "../../utils/flex/flex";
+import { mediaQueries } from "../../utils/themes/mediaQueries";
 
 const CardArray = [
   {
@@ -40,7 +41,6 @@ const CardContainer = styled(Flex)`
   overflow-x: scroll;
   overflow-y: hidden;
   padding-bottom: 0.5rem;
- 
 
   ::-webkit-scrollbar {
     height: 0.5rem;
@@ -61,12 +61,22 @@ const CardContainer = styled(Flex)`
   .card-image {
     width: 37.3rem;
     height: 37.3rem;
+
+    ${mediaQueries.phone} {
+      max-width: 25rem;
+      height: auto;
+    }
   }
 
   .card-text {
     position: absolute;
     left: 2rem;
     top: 30.2rem;
+
+    ${mediaQueries.phone} {
+     top: 21rem;
+     left: 1rem;
+    }
   }
 `;
 

@@ -1,8 +1,8 @@
 const sizes = {
-  phone: "37.5em",
-  tabport: "56.25em",
-  tabland: "75em",
-  bigdesktop: "112.5em",
+  phone: "37.5em", //600px
+  tabport: "56.25em", //900px
+  tabland: "75em", //1200px
+  bigdesktop: "112.5em", //1800px
 };
 
 export const mediaQueries = {

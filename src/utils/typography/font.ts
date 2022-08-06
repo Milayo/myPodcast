@@ -11,12 +11,16 @@ type BaseFonts = {
   fontFamily?: string;
   mobileSize?: string;
   mobileLineHeight?: string;
+  tabSize?: string;
+  tabLineHeight?: string;
 };
 
 const title = {
   fontWeight: 700,
   fontSize: "9.6rem",
   lineHeight: "100%",
+  mobileSize: "7rem",
+  tabSize: "8rem",
   letterSpacing: "-4%",
 };
 
@@ -32,6 +36,7 @@ const h2 = {
   fontSize: "3.665rem",
   lineHeight: "100%",
   letterSpacing: "-2%",
+  mobileSize: "2.5rem",
 };
 
 const h2a = {
@@ -44,6 +49,7 @@ const h3 = {
   fontSize: "2.265rem",
   lineHeight: "160%",
   letterSpacing: "0%",
+  mobileSize: "2rem",
 };
 
 const h3b = {

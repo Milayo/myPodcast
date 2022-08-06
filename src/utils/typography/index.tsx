@@ -52,6 +52,11 @@ const Typography = styled.div<TextProps>`
   ${baseTypography}
   ${border}
   ${baseColor}
+
+  ${mediaQueries.tabport} {
+    font-size: ${({ font }) => typography[font]?.tabSize};
+    line-height: ${({ font }) => typography[font]?.tabLineHeight};
+  }
   ${mediaQueries.phone} {
     font-size: ${({ font }) => typography[font]?.mobileSize};
     line-height: ${({ font }) => typography[font]?.mobileLineHeight};

@@ -17,14 +17,14 @@ const LandingPage = () => {
   return (
     <PageContainer>
       <Header />
-      <AboutSection />
+      {/* <AboutSection />
       <Testimonials />
       <FeaturesSection />
       <EpisodesSection />
       <SponsorsSection />
       <BlogSection/>
       <CTASection />
-      <FooterSection/>
+      <FooterSection/> */}
     </PageContainer>
   );
 };
