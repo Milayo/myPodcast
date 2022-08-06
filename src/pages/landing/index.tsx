@@ -17,9 +17,9 @@ const LandingPage = () => {
   return (
     <PageContainer>
       <Header />
-      {/* <AboutSection />
+      <AboutSection />
       <Testimonials />
-      <FeaturesSection />
+      {/* <FeaturesSection />
       <EpisodesSection />
       <SponsorsSection />
       <BlogSection/>

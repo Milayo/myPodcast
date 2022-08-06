@@ -38,7 +38,7 @@ const HeaderContainer = styled.div`
     }
 
     @media screen and (max-width: 400px) {
-      top: 142rem;
+      top: 140rem;
     }
   }
 `;
@@ -62,7 +62,7 @@ const ContentContainer = styled(Flex)`
     }
 
     ${mediaQueries.phone} {
-      top: 22rem;
+      top: 23rem;
     }
   }
 
@@ -114,7 +114,7 @@ const ContentContainer = styled(Flex)`
 
     ${mediaQueries.phone} {
       max-width: 10rem;
-      top: 30rem;
+      top: 32rem;
     }
   }
 `;

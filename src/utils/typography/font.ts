@@ -29,6 +29,8 @@ const h1 = {
   fontSize: "5.93rem",
   lineHeight: "120%",
   letterSpacing: "-2%",
+  mobileSize: "3.2rem",
+  tabSize: "4.5rem",
 };
 
 const h2 = {
@@ -36,7 +38,8 @@ const h2 = {
   fontSize: "3.665rem",
   lineHeight: "100%",
   letterSpacing: "-2%",
-  mobileSize: "2.5rem",
+  tabSize: "3rem",
+  mobileSize: "2.5rem"
 };
 
 const h2a = {
@@ -64,6 +67,7 @@ const bodyText = {
   fontSize: "1.6rem",
   lineHeight: "160%",
   letterSpacing: "0%",
+  
 };
 
 const bodyTextb = {
