@@ -13,8 +13,8 @@ export const mediaQueries = {
 };
 
 export const devices = {
-  phone: ` (max-width: ${sizes.phone})`,
-  tabport: ` (max-width: ${sizes.tabport})`,
-  tabland: ` (max-width: ${sizes.tabland})`,
-  bigdesktop: ` (max-width: ${sizes.bigdesktop})`,
+  phone: `(max-width: ${sizes.phone})`,
+  tabport: `(max-width: ${sizes.tabport})`,
+  tabland: `(max-width: ${sizes.tabland})`,
+  bigdesktop: `(max-width: ${sizes.bigdesktop})`,
 };

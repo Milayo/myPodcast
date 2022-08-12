@@ -10,6 +10,7 @@ import Spotify from "../../assets/images/testimonial-spotify.png";
 import GooglePodcasts from "../../assets/images/testimonial-podcast.png";
 import BlackConnector from "../../assets/images/BlackConnector.png";
 import Flex from "../../utils/flex/flex";
+import { mediaQueries } from "../../utils/themes/mediaQueries";
 
 interface TestimonialCardProps {
   name: string;
@@ -21,6 +22,12 @@ const CardContainer = styled.div`
   background-color: white;
   max-width: 57rem;
   padding: 4rem;
+  ${mediaQueries.phone} {
+    
+    padding: 2rem;
+  }
+
+  
 `;
 
 const TestimonialContainer = styled.div`
@@ -30,6 +37,14 @@ const TestimonialContainer = styled.div`
   .container {
     position: relative;
     padding: 14rem 0 10.55rem 14rem;
+
+    ${mediaQueries.tabport} {
+      padding: 12rem 6rem;
+    }
+
+    ${mediaQueries.phone} {
+      padding: 12rem 4rem;
+    }
   }
 
   .arrow-container {
@@ -57,13 +72,27 @@ const TestimonialContainer = styled.div`
   .sparkle {
     position: absolute;
     top: 6.5rem;
-    left: 30rem
+    left: 20%;
+    max-width: 10.5rem;
+    height: auto;
+    ${mediaQueries.tabport} {
+      top: 2rem;
+      left: 13%;
+    }
+
+    ${mediaQueries.phone} {
+      max-width: 8rem;
+      top: 4rem;
+    }
   }
 
   .blackconnector {
     left: 50%;
     top: 88rem;
     position: absolute;
+    ${mediaQueries.phone} {
+      height: 1rem;
+    }
   }
 `;
 
@@ -77,7 +106,7 @@ const TestimonialCard = ({ name, image, image2 }: TestimonialCardProps) => {
         Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor
         incidi ut labore et dolore magna aliqua.
       </Typography>
-      <Flex justifyContent="start" alignItems="center" gap="1rem" mt="3.2rem">
+      <Flex justifyContent="start" alignItems="center" gap="1rem" mt="3.2rem" >
         <img src={image} alt="avatar" />
         <Typography font="caption" as="p" fontSize="1.4rem">
           {name}
