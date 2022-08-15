@@ -23,10 +23,8 @@ const CardContainer = styled.div`
   max-width: 57rem;
   padding: 4rem;
   ${mediaQueries.phone} {
-    
     padding: 2rem;
   }
-
   
 `;
 
@@ -88,10 +86,10 @@ const TestimonialContainer = styled.div`
 
   .blackconnector {
     left: 50%;
-    top: 88rem;
+    bottom: -8rem;
     position: absolute;
-    ${mediaQueries.phone} {
-      height: 1rem;
+    ${mediaQueries.tabland} {
+      bottom: -10rem;
     }
   }
 `;

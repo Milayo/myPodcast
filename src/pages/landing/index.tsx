@@ -19,9 +19,9 @@ const LandingPage = () => {
       <Header />
       <AboutSection />
       <Testimonials />
-      {/* <FeaturesSection />
+      <FeaturesSection />
       <EpisodesSection />
-      <SponsorsSection />
+      {/* <SponsorsSection />
       <BlogSection/>
       <CTASection />
       <FooterSection/> */}

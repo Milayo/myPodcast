@@ -10,6 +10,7 @@ import Face from "../../assets/images/Face 5.png";
 import Fire from "../../assets/images/Fire.png";
 import Star from "../../assets/images/Star.png";
 import BlackConnector from "../../assets/images/BlackConnector.png";
+import { mediaQueries } from "../../utils/themes/mediaQueries";
 
 interface CardProps {
   title: string;
@@ -17,39 +18,79 @@ interface CardProps {
 }
 
 const Button = styled(BaseButton)`
-  padding: 20px 36px;
+  padding: 20px 30px;
   background: ${({ theme }) => theme.colors.black};
   color: white;
   box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.25);
   margin: 10rem auto 0 auto;
   max-width: 18rem;
+
+   ${mediaQueries.phone} {
+     padding: 15px 25px;
+   }
 `;
 
 const CardContainer = styled(Flex)`
   flex-direction: column;
-  width: 34rem;
+  width: 32rem;
   flex-shrink: 0;
+
+  ${mediaQueries.phone} {
+    width: 30rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 75%;
+  }
 `;
 
 const SectionContainer = styled.div`
-  padding: 14rem;
+  padding: 14rem 8rem;
   position: relative;
+  max-width: 1440px;
+  margin: auto;
+
+  ${mediaQueries.tabport} {
+    padding: 14rem 5rem;
+  }
+
+  ${mediaQueries.phone} {
+    padding: 14rem 2rem;
+  }
 
   .cardlist {
     gap: 8.6rem 2rem;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+      gap: 8rem;
+    }
   }
 
   .scribble {
     position: absolute;
     top: 4.6rem;
     right: 20%;
+    max-width: 19rem;
+
+    ${mediaQueries.tabport} {
+      max-width: 15rem;
+    }
+
+    ${mediaQueries.phone} {
+      max-width: 12rem;
+    }
   }
 
   .blackconnector {
     left: 50%;
-    top: 107.9rem;
+    bottom: -8rem;
     position: absolute;
+
+    ${mediaQueries.tabland} {
+     bottom: -10rem;
+    }
   }
 `;
 
