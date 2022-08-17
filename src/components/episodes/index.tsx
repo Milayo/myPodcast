@@ -3,6 +3,7 @@ import Typography from "../../utils/typography";
 import Flex from "../../utils/flex/flex";
 import { Button as BaseButton } from "../../components/button/index";
 import BlackConnector from "../../assets/images/BlackConnector.png";
+import { mediaQueries } from "../../utils/themes/mediaQueries";
 import Sparkle from "../../assets/images/Episode-sparkle.png";
 import Avatar1 from "../../assets/images/Episode-avatar1.png";
 import Avatar2 from "../../assets/images/Episode-avatar2.png";
@@ -29,6 +30,14 @@ const Button = styled(BaseButton)`
   box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.25);
   margin: 10rem auto 0 auto;
   max-width: 26.3rem;
+
+  ${mediaQueries.tabland} {
+    padding: 20px 30px;
+  }
+
+  ${mediaQueries.tabport} {
+    padding: 15px;
+  }
 `;
 
 const CardContainer = styled.div<{ shadow?: boolean }>`
@@ -40,11 +49,39 @@ const CardContainer = styled.div<{ shadow?: boolean }>`
   width: 52rem;
   flex-shrink: 0;
 
+  ${mediaQueries.tabport} {
+    width: 45rem;
+  }
+
+  @media screen and (max-width: 750px) {
+    width: 75%;
+    padding: 2.5rem;
+  }
+  @media screen and (max-width: 500px) {
+    width: 90%;
+    padding: 1rem;
+  }
+
   .episode-title {
     border-bottom: 0.5px solid #4d4d4d;
     padding-bottom: 1.5rem;
     margin-bottom: 1rem;
     color: ${({ shadow }) => shadow === true && "#CD4631"};
+
+    ${mediaQueries.tabport} {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .episode-cover {
+    max-width: 16rem;
+    ${mediaQueries.tabport} {
+      max-width: 14rem;
+    }
+
+    @media screen and (max-width: 750px) {
+      max-width: 16rem;
+    }
   }
 
   .tag {
@@ -64,24 +101,50 @@ const CardContainer = styled.div<{ shadow?: boolean }>`
 
 const EpisodesContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.champagne};
-  padding: 14rem;
   position: relative;
   z-index: -1;
 
+  ${mediaQueries.bigdesktop} {
+    padding: 14rem 7rem;
+  }
+  ${mediaQueries.tabland} {
+    padding: 14rem 2rem;
+  }
+
   .cardlist {
     flex-wrap: wrap;
+
+    
+  @media screen and (max-width: 750px) {
+    gap: 5rem;
+  }
+
   }
 
   .sparkle {
     position: absolute;
-    top: 19.7rem;
+    top: 19rem;
     right: 0;
+    max-width: 20rem;
+
+    ${mediaQueries.tabport} {
+      max-width: 16rem;
+    }
+
+     @media screen and (max-width: 500px) {
+       max-width: 12rem;
+       top: 22rem;
+     }
   }
 
   .blackconnector {
     left: 50%;
-    top: 139.5rem;
+bottom: -9rem;
     position: absolute;
+
+     ${mediaQueries.tabport} {
+       bottom: -10rem;
+     }
   }
 `;
 
@@ -95,8 +158,8 @@ const EpisodeCard = ({
 }: CardProps) => {
   return (
     <CardContainer shadow={shadow}>
-      <Flex gap="2rem">
-        <img src={image} alt="episode-cover" />
+      <Flex gap="2rem" justifyContent="space-between">
+        <img src={image} alt="episode-cover" className="episode-cover" />
         <div>
           <Typography
             font="bodyTextb"
