@@ -23,8 +23,8 @@ const LandingPage = () => {
       <EpisodesSection />
       <SponsorsSection />
       <BlogSection/>
-      {/* <CTASection />
-      <FooterSection/> */}
+      <CTASection />
+      {/* <FooterSection/> */}
     </PageContainer>
   );
 };

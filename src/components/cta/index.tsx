@@ -12,6 +12,7 @@ import Sparkle4 from "../../assets/images/CTA-Sparkle4.png";
 import Home from "../../assets/images/CTA-Home.png";
 import Play from "../../assets/images/CTA-Play.png";
 import Swirl from "../../assets/images/CTA-Swirl.png";
+import { mediaQueries } from "../../utils/themes/mediaQueries";
 
 const Button = styled(BaseButton)`
   padding: 2rem 3.6rem;
@@ -20,6 +21,13 @@ const Button = styled(BaseButton)`
   box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.25);
   width: 22rem;
   margin: 14rem auto 2.4rem auto;
+   ${mediaQueries.phone} {
+      margin-top: 10rem;
+    }
+
+    @media screen and (max-width: 500px) {
+      margin-top: 5rem;
+    }
 `;
 
 const CTAContainer = styled.div`
@@ -44,31 +52,83 @@ const CTAContainer = styled.div`
   .sparkle1 {
     position: absolute;
     top: 47rem;
-    left: 74rem;
+    left: 57%;
+    max-width: 12rem;
+    ${mediaQueries.tabport} {
+      max-width: 9rem;
+      top: 44rem;
+    }
+
+    ${mediaQueries.phone} {
+      max-width: 6rem;
+      top: 37rem;
+      left: 60%;
+    }
+
+    @media screen and (max-width: 500px) {
+      top: 33rem;
+      left: 63%;
+    }
+     @media screen and (max-width: 400px) {
+       left: 67%;
+     }
   }
   .sparkle2 {
     position: absolute;
     top: 36rem;
     left: 10.1rem;
+    width: 2.5rem;
+    ${mediaQueries.tabport} {
+      left: 8rem;
+    }
   }
   .sparkle3 {
     position: absolute;
     top: 37.7rem;
     left: 11.5rem;
+    max-width: 6rem;
+    ${mediaQueries.tabport} {
+      max-width: 4rem;
+      left: 9rem;
+    }
   }
   .sparkle4 {
     position: absolute;
     top: 37.5rem;
     left: 0rem;
     z-index: 500;
+    max-width: 14rem;
+
+    ${mediaQueries.tabport} {
+      max-width: 12rem;
+    }
+
+    ${mediaQueries.phone} {
+      max-width: 8rem;
+    }
   }
 
   .play {
     position: absolute;
-    width: 37.3rem;
+    max-width: 37.3rem;
     height: auto;
     bottom: 0rem;
     right: 0rem;
+
+    ${mediaQueries.tabport} {
+      max-width: 25rem;
+    }
+
+    ${mediaQueries.phone} {
+      max-width: 23rem;
+    }
+
+    @media screen and (max-width: 500px) {
+      max-width: 14rem;
+    }
+    @media screen and (max-width: 400px) {
+      max-width: 12rem;
+    }
   }
 
   .swirl {
@@ -76,14 +136,35 @@ const CTAContainer = styled.div`
     right: 12.1rem;
     bottom: 0rem;
     z-index: -100;
+    max-width: 20rem;
+    ${mediaQueries.tabport} {
+      max-width: 15rem;
+    }
+
+    ${mediaQueries.phone} {
+      max-width: 10rem;
+      right: 7rem;
+    }
   }
 
   .home {
     position: absolute;
     bottom: 0rem;
     left: 0rem;
-    width: 37.3rem;
+    max-width: 37.3rem;
     height: auto;
+
+    ${mediaQueries.tabport} {
+      max-width: 26rem;
+    }
+
+    ${mediaQueries.phone} {
+      max-width: 23rem;
+    }
+
+    @media screen and (max-width: 500px) {
+      max-width: 15rem;
+    }
   }
 `;
 

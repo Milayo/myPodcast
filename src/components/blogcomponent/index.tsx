@@ -48,8 +48,12 @@ const BlogContainer = styled.div`
   }
   .Redconnector {
     left: 50%;
-    top: 123.2rem;
+    bottom: -9rem;
     position: absolute;
+
+    ${mediaQueries.tabport} {
+      bottom: -11rem;
+    }
   }
 
   .star {
@@ -62,7 +66,7 @@ const BlogContainer = styled.div`
     }
 
     ${mediaQueries.phone} {
-     left: 1rem;
+      left: 1rem;
       max-width: 12rem;
     }
   }
