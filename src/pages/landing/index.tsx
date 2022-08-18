@@ -22,8 +22,8 @@ const LandingPage = () => {
       <FeaturesSection />
       <EpisodesSection />
       <SponsorsSection />
-      {/* <BlogSection/>
-      <CTASection />
+      <BlogSection/>
+      {/* <CTASection />
       <FooterSection/> */}
     </PageContainer>
   );

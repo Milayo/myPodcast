@@ -11,7 +11,7 @@ const PlatformContainer = styled(Flex)`
   padding: 4.6rem;
   justify-content: space-around;
   border-bottom: 1.5px solid #4d4d4d;
-  width: 116rem;
+  width: 110rem;
   margin: 12rem auto 0 auto;
 
   ${mediaQueries.tabport} {

@@ -7,6 +7,7 @@ import Image1 from "../../assets/images/blog-image1.png";
 import Image2 from "../../assets/images/blog-image2.png";
 import Swirl from "../../assets/images/Blog-swirl.png";
 import Star from "../../assets/images/Blog-Star.png";
+import { mediaQueries } from "../../utils/themes/mediaQueries";
 
 interface BlogCardProps {
   image: any;
@@ -34,6 +35,17 @@ const BlogContainer = styled.div`
   padding: 14rem;
   position: relative;
 
+  ${mediaQueries.tabport} {
+    padding: 14rem 8rem;
+  }
+
+  ${mediaQueries.phone} {
+    padding: 14rem 3rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 14rem 5rem;
+  }
   .Redconnector {
     left: 50%;
     top: 123.2rem;
@@ -45,11 +57,35 @@ const BlogContainer = styled.div`
     z-index: -100;
     top: 29.8rem;
     left: 4.3rem;
+    ${mediaQueries.tabport} {
+      max-width: 15rem;
+    }
+
+    ${mediaQueries.phone} {
+     left: 1rem;
+      max-width: 12rem;
+    }
   }
   .swirl {
     position: absolute;
     bottom: 19.1rem;
     right: 4rem;
+    max-width: 19rem;
+
+    ${mediaQueries.tabport} {
+      max-width: 15rem;
+    }
+
+    ${mediaQueries.phone} {
+      max-width: 10rem;
+    }
+  }
+
+  .grp {
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+      gap: 3rem;
+    }
   }
 `;
 
@@ -141,7 +177,7 @@ const BlogSection = () => {
       <Typography font="h3" as="h3" align="center" mt="2rem" mb="10rem">
         News, tips, tricks and more
       </Typography>
-      <Flex gap="2rem">
+      <Flex gap="2rem" className="grp">
         <BlogCard
           image={Image1}
           boxShadow={true}

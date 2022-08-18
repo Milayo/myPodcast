@@ -114,11 +114,9 @@ const EpisodesContainer = styled.div`
   .cardlist {
     flex-wrap: wrap;
 
-    
-  @media screen and (max-width: 750px) {
-    gap: 5rem;
-  }
-
+    @media screen and (max-width: 750px) {
+      gap: 5rem;
+    }
   }
 
   .sparkle {
@@ -131,20 +129,20 @@ const EpisodesContainer = styled.div`
       max-width: 16rem;
     }
 
-     @media screen and (max-width: 500px) {
-       max-width: 12rem;
-       top: 22rem;
-     }
+    @media screen and (max-width: 500px) {
+      max-width: 12rem;
+      top: 22rem;
+    }
   }
 
   .blackconnector {
     left: 50%;
-bottom: -9rem;
+    bottom: -9rem;
     position: absolute;
 
-     ${mediaQueries.tabport} {
-       bottom: -10rem;
-     }
+    ${mediaQueries.tabport} {
+      bottom: -10rem;
+    }
   }
 `;
 
