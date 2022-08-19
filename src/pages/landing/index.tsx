@@ -24,7 +24,7 @@ const LandingPage = () => {
       <SponsorsSection />
       <BlogSection/>
       <CTASection />
-      {/* <FooterSection/> */}
+      <FooterSection/>
     </PageContainer>
   );
 };

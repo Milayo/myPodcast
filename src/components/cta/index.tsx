@@ -54,6 +54,7 @@ const CTAContainer = styled.div`
     top: 47rem;
     left: 57%;
     max-width: 12rem;
+    
     ${mediaQueries.tabport} {
       max-width: 9rem;
       top: 44rem;
